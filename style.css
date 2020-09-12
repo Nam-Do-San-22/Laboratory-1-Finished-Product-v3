@@ -1,9 +1,26 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: DejaVu Sans Mono-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	
+}
+body{
+background-color: #e2e2e2;
+
+}
 .ab{
 	padding-left: 50px;
 	padding-right: 50px;
 }
+.about1{
+margin-left: 50px;
+	margin-right: 50px;
 
+
+}
 .about{
+	margin-left: 50px;
+	margin-right: 50px;
 	padding: 20px;
 
 	border-radius: 20px;
@@ -13,23 +30,71 @@
 	
 }
 
-body{
+
+audio{
+	margin-left: 35px;
+	width:94%;
+	border-style: ridge;
+	border-width: 5px;
+	border-radius: 30px;
+	border-top-color: darkblue;
+	border-bottom-color: darkcyan;
+	border-left-color: darkcyan;
+	border-right-color:darkblue ;
+	border-left-style: dotted;
+	border-right-style: dotted;
+	box-shadow: 0 0 40px dodgerblue;
+
+}
+
+ /*nav bar*/
+
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: #2027a5;
+	line-height: 80px;
+	position:fixed;
+}
+
+nav ul{
+    float:right;
+    margin-right: 30px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    transition: 0.5s all;
+
+}
+nav ul :hover{
 	
-	margin: 0px 20px ;
-	padding: 0px;
+	text-transform: uppercase;
+	color: darkblue;
+	border-radius: 10px;
+	transition: transform .2s;
+	transform: scale(1.2)
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 30px;
 	
-	background: #FAFAFA;
-	font-family: Tahoma, Geneva, sans-serif;
-	color:black;
-	
- }
+}
+
+
+
+ /* ---------------- */
 
  .bg{
+	padding: 20px; 
 	border-style: double;
 	border-color: lightcyan;
 	border-radius: 10px;
 
-	background-color: #2B60DE;
+	background-color: rgba(4, 0, 255, 0.533);
 	color: white;
 	
 }
@@ -41,27 +106,34 @@ body{
 .button{
 	padding: 12px 20px;
 	margin-left: 10px;
-    margin-bottom: 10px;
+   	 margin-bottom: 10px;
     border: none;
 	border-radius: 10px;
 	box-shadow: 0 0 10px cyan;
 
-	background-color: #151B8D;
+	background: rgb(7,0,112);
+	
+	background: rgb(21,14,119);
+	background: linear-gradient(90deg, rgba(21,14,119,1) 17%, rgba(43,53,195,1) 52%, rgba(5,49,134,1) 96%);
 	color: white;
+	
 	
    
  }
 
 
 .button:hover{
-	opacity: 0.3;
-    filter: alpha(opacity=30);
-	text-decoration:none;
+	background: linear-gradient(90deg, rgba(71,63,203,1) 0%, rgba(9,9,120,1) 52%, rgba(11,85,228,1) 97%);
+	
+	text-transform: uppercase red;
+	transition: transform .2s;
+	transform: scale(1.1)
 	
 }
 hr{
-	padding: 1px;
-	
+	padding-left: 1px;
+	margin-left: auto;
+	margin-right: auto;
 	
 	border-width: 1px;
 	border-style: solid;
@@ -73,14 +145,10 @@ hr{
 	
 }
 
-header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 30px 10% ;
 
 
-}
+
+
 
 .im:hover{
 	
@@ -89,7 +157,7 @@ header{
 	
 }
 input[type=text],textarea{
-	width: 90x;
+	width: 90%;
 	padding: 10px;
 	border-radius: 10px;
 
@@ -100,7 +168,7 @@ input[type=text],textarea{
 input[type=text]:focus {
 	border: 3px solid #555;
 	background-color: white;
-
+	
 
   }
 
@@ -112,7 +180,7 @@ textarea:focus{
 
 input[type=email]{
 
-	width: 90x;
+	width: 90%;
 	padding: 10px;
 	border-radius: 10px;
 
@@ -129,22 +197,24 @@ input[type=email]:focus {
 
   input[type=number]{
 
-	width: 90x;
+	width: 90%;
 	padding: 10px;
 	border-radius: 10px;
 
 	background-color: lightblue;
 
 }
-input[type=textarea]{
-
+textarea{
+	
 	width: 90x;
 	padding: 10px;
 	border-radius: 10px;
-
+	border-style: groove;
+	border-width: 3px;
 	background-color: lightblue;
 
 }
+
 
   input[type=number]:focus {
 	border: 3px solid #555;
@@ -153,58 +223,43 @@ input[type=textarea]{
 
   }
 
-/*----------NavBar-----------*/
-nav{
-	width: 100%;
-	position:fixed;
-	background:#151B8D;
-
-}
 
 
-ul{
-	padding: 0;
-	margin: 0.1px 0.1px 0px 50px;
-	list-style: none;
+.items:hover{
+	box-shadow: 0 0 80px darkcyan;
 
-}
-
-
-li{
-	margin-left: 100px;
-	float:left;
-
-
-}
-
-li a {
 	
-	width: 100%;
-	display: inline-block;
-	padding: 20px 15px 20px 0px;
-	margin-left: 25px;
-	text-decoration: none;
-	font-family: 'Helvetica';font-size: 17px;
-	color: white;
-	text-align: center;
-	font-size: 20px;
-}
-
-li a:hover{
+	transition: transform .3s;
+	transform: scale(1.1)
 	
-	color: #2B60DE;
-	transition: transform .2s;
-	transform: scale(1.2)
-}
-
-.logo{
-	display: inline-block;
-	position: fixed;
-	top: 0;
-	left: 0;
 
 }
-/*----------NavBar-----------*/
+
+label{
+
+	padding-left: 10px;
+	
+}
+.nbastore{
+	margin:auto;
+	padding:25px;
+	box-shadow: 0 0 20px cyan;
+	border-radius: 10px;
+}
+.nba{
+	box-shadow: 0 0 50px cyan;
+	
+	border-radius: 80px;
+
+}
+
+ .nba:hover{
+ 	 transform: scaleX(-1);
+ } 
+
+
+
+
 
 .ok{
 	margin-left: 700px;
@@ -226,7 +281,7 @@ p{
 
 .pp{
 	padding:20px;
-
+	margin-bottom: 0px;
 	text-align: center;
 	background-color: #151B8D;
 	color: white;
@@ -241,7 +296,7 @@ p{
 }
 .pic:hover{
 
-	opacity: 0.3;
+	opacity: 0.5;
     filter: alpha(opacity=30);
 }
 
@@ -261,9 +316,15 @@ p{
 	
 }
 
+.tableimg{
+	transition: 0.4s all;
 
+}
 
+.table{
+	transition: 0.9s all;
 
+}
 
 table{
 	
@@ -273,10 +334,18 @@ table{
 		
 }
 
+.tableimg:hover{
+	
+	box-shadow: 0 0 30px #000000;
+	border-radius: 10000px;
+
+
+}
 .table:hover{
 	
 	transition: transform .3s;
-	transform: scale(1.3)
+	transform: scale(1.2)
+
 }
 
 .table1{
@@ -302,7 +371,7 @@ table{
 	display: inline-block;
    	 position: fixed;
    	 left: 0;
-  	  bottom: 0;
+  	bottom: 0;
   	border-radius:80px;
 	border-style:solid;
 	border-color:white;
@@ -330,13 +399,15 @@ table{
 }
 
 .title1{
-	padding-left: 5px;
+	padding-left: 15px;
 	padding-top: 10px;
 	margin-left: 10px;
 	margin-top: 10px;
 	margin-bottom:1px;
 
 	font-size: 25px;
+	font-weight: 500;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 video{
@@ -354,6 +425,8 @@ video{
 }
 .video1{
 	background-color: lightgray;
-	border-style: inset;
-	
+	border-style: groove;
+	border-color: darkslateblue;
+	border-radius: 20px;
 }
+
